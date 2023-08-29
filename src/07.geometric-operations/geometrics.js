@@ -7,8 +7,9 @@ const calculateTriangleArea = (a, b, c) => {
   ) {
     const p = (a + b + c) / 2;
     return Math.sqrt(p * (p - a) * (p - b) * (p - c));
+  } else {
+    throw new Error("Parameters are invalid.");
   }
-  throw new Error("Parameters are invalid.");
 };
 
 module.exports = { calculateTriangleArea };
